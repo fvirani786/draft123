@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Table</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
+
 <body>
-   <!-- html markup goes in body-->
-   <h1>My Custom Table </h1>
-   <div>
+    <!-- html markup goes in body-->
+    <script src="assets/js/app.js" lang="javascript"></script>
+    <h1>My Custom Table </h1>
+    <div>
         What table number you are looking for
-        <input type="text" id="tableValue" >
+        <input type="number" id="tableValue">
     </div>
     <br>
     <div>
         How far you need the table for
-        <input type="text" id="numberOfLines" >
+        <input type="number" id="numberOfLines">
     </div>
 
+    <br>
+    <div>
+        <input type="radio" name="editList" id="addition" value="+" />
+        <label for="addition">Addition</label>
+
+        <input type="radio" name="editList" id="subtraction" value="-" />
+        <label for="subtraction">Subtraction</label>
+
+        <input type="radio" name="editList" id="multiplication" value="*" />
+        <label for="multiplication">Multiplication</label>
+    </div>
     <br>
     <div>
         <input type="button" class="btn" value="Get My Table" onclick="displayTable()">
@@ -27,18 +42,10 @@
     </div>
     <br> <br>
     <div id="table"></div>
-   <script src="app.js" lang="javascript"></script>
-</body>
 
-<html lang="en"> 
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-<title>Document</title> 
-</head> 
-<body> 
-<div id="btn">Button Here</div> 
-<script src="myapp.js"></script> 
+    <div>
+        <ul id="listElement">
+        </ul>
+    </div>
+
 </body>
-</html>

@@ -1,38 +1,36 @@
-let tableValue = document.getElementById("tableValue");
-let numberOfLines = document.getElementById("numberOfLines");
-
 
 function displayTable() {
-   
-    // alert(tableValue.value)
-    let tableOutput = document.getElementById("table");
-    tableOutput.innerHTML = "";
-    //tableOutput.innerText = "Web Developer Course";
-    const tableFor = tableValue.value;
-    const lines = numberOfLines.value;
-    for (let counter = 1; counter <= lines; counter ++) {
-        //console.log(tableFor + ' x ' + counter + ' = ' + tableFor * counter)
-        tableOutput.innerHTML = tableOutput.innerHTML + tableFor + ' x ' + counter + ' = ' + tableFor * counter + '<br>';
+
+    //writing new code for test:
+    console.log(document.getElementById('tableValue').value)
+    let tableValue = document.getElementById('tableValue').value
+    // alert(tableValue)
+
+    console.log(document.getElementById('numberOfLines').value)
+    let numberOfLines = document.getElementById('numberOfLines').value
+    let test = Number(numberOfLines)
+    // alert(numberOfLines)
+    let listElement = document.getElementById('listElement')
+
+    console.log(document.querySelector('input[name="editList"]:checked').value)
+    let operand = document.querySelector('input[name="editList"]:checked').value
+
+
+    for (let counter = 1; counter <= Number(numberOfLines); counter++) {
+        let list = document.createElement('li')
+        list.innerHTML = tableValue + operand + counter + " = " + eval(tableValue + operand + counter)
+        listElement.append(list)
     }
+
 }
 
 function clearDisplay() {
-    let tableOutput = document.getElementById("table");
-    tableOutput.innerHTML = "";
+    document.getElementById('tableValue').value = ""
+    document.getElementById('numberOfLines').value = ""
+    //remove li elements
 }
 
 
-
-
-document.addEventListener("DOMContentLoaded", function() {
-     var element = document.createElement("button");
-     element.appendChild(document.createTextNode("Click Me!"));
-     var page = document.getElementById("btn");
-     page.appendChild(element);
-     console.log(element);
- });
-
- // Corrected "meta charset="UTF-8"".
 
 
 
