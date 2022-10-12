@@ -1,5 +1,5 @@
-let tableValue = document.getElementById("tableValue");
-let numberOfLines = document.getElementById("numberOfLines");
+// let tableValue = document.getElementById("tableValue");
+// let numberOfLines = document.getElementById("numberOfLines");
 
 
 function displayTable() {
@@ -7,11 +7,19 @@ function displayTable() {
     //writing new code for test:
     console.log(document.getElementById('tableValue').value)
     let tableValue = document.getElementById('tableValue').value
-    alert(tableValue)
+    // alert(tableValue)
 
     console.log(document.getElementById('numberOfLines').value)
     let numberOfLines = document.getElementById('numberOfLines').value
-    alert(numberOfLines)
+    let test = Number(numberOfLines)
+    // alert(numberOfLines)
+    let listElement = document.getElementById('listElement')
+
+    for (let counter = 1; counter <= Number(numberOfLines); counter++) {
+        let list = document.createElement('li')
+        list.innerHTML = tableValue + " X " + counter + " = " + tableValue * counter
+        listElement.append(list)
+    }
 
 
     // // alert(tableValue.value)
